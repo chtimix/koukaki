@@ -1,0 +1,16 @@
+{
+  "name": "foce-child",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass --watch scss:css --style=expanded",
+  "sass:prod": "sass scss:css --style=compressed"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.0"
+  }
+}
