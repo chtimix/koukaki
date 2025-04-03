@@ -79,4 +79,43 @@ h2.animate span:nth-child(2) {
   transform: translateY(0);
 }
 
+/* Swiper - Carrousel */
+/* Conteneur principal Swiper */
+.mySwiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Wrapper Swiper */
+.swiper-wrapper {
+  display: flex;
+}
+
+/* Slide individuel */
+.swiper-slide {
+  width: 400px !important; /* important = priorité sur style inline */
+  height: 400px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Images dans les slides */
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Pagination visible */
+.swiper-pagination {
+  margin-top: 100px;
+  text-align: center;
+  position: relative !important;
+  z-index: 10;
+}
+
 /*# sourceMappingURL=animations.css.map */

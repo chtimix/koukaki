@@ -1,3 +1,4 @@
+// Animation des titres de section 
 document.addEventListener('DOMContentLoaded', () => {
     // ➤ 1. Injecter un span autour de chaque mot dans les h2
     document.querySelectorAll('h2').forEach(h2 => {
@@ -27,4 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('h2').forEach(h2 => {
       observer.observe(h2);
     });
+
+    // Swiper
+    const swiper = new Swiper('.mySwiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+      },
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+    });
+
   });
