@@ -1,3 +1,12 @@
+// Parallax logo
+document.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const logo = document.querySelector('.banner-logo');
+  if (logo) {
+      logo.style.transform = `translateY(${scrollY * 0.2}px)`;
+  }
+});
+
 // Animation des titres de section 
 document.addEventListener('DOMContentLoaded', () => {
     // ➤ 1. Injecter un span autour de chaque mot dans les h2

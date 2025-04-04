@@ -2,12 +2,24 @@
 /* Animation des sections*/
 .banner {
   animation: animTop 1s;
+  position: relative;
+  overflow: hidden;
 }
 
 .banner img {
+  position: relative;
   display: inline-block;
   animation: animLogo 500ms ease-out 0.3s;
   animation-fill-mode: both;
+  z-index: 2;
+  width: 100%;
+}
+
+.banner-logo {
+  position: relative;
+  z-index: 2;
+  will-change: transform;
+  transition: transform 0.5s ease-out;
 }
 
 .story, #studio {
@@ -44,6 +56,16 @@
     opacity: 1;
   }
 }
+/* Video hero */
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
 /* Rotation infinie de la fleur */
 @keyframes rotateInfinite {
   0% {

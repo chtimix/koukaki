@@ -2,11 +2,17 @@
 
 get_header();
 ?>
-
     <main id="primary" class="site-main">
         <section class="banner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <video class="banner-video" autoplay muted loop playsinline poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?>">
+                <source src="<?php echo get_stylesheet_directory_uri() . '/images/video-koukaki.mp4'; ?>" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo HTML5.
+            </video>
+            <div class="banner-logo">
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            </div>
         </section>
+
         <section id="#story" class="story">
             <h2>L'histoire</h2>
             <article id="" class="story__article">
