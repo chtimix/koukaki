@@ -7,6 +7,14 @@ document.addEventListener('scroll', () => {
   }
 });
 
+// Menu - au clic, décoche la checkbox responsable de l’ouverture du menu
+document.querySelectorAll('.submenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    const checkbox = document.getElementById('menu-toggle-anim');
+    if (checkbox) checkbox.checked = false;
+  });
+});
+
 // Animation des titres de section 
 document.addEventListener('DOMContentLoaded', () => {
     // ➤ 1. Injecter un span autour de chaque mot dans les h2

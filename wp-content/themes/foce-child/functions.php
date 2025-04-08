@@ -16,14 +16,14 @@ function theme_child_enqueue_scripts() {
         'app',
         get_stylesheet_directory_uri() . '/js/app.js',
         array('swiper-js'), // ou ['jquery'] si tu l’utilises
-        null,
+        '1.0',
         true // pour le charger dans le footer
     );
     wp_enqueue_script(
         'swiper-js',
         get_stylesheet_directory_uri() . '/node_modules/swiper/swiper-bundle.min.js',
         array(), // ou ['jquery'] si tu l’utilises
-        null,
+        '11.2.6',
         true // pour le charger dans le footer
     );
     wp_enqueue_script(
