@@ -127,15 +127,53 @@ header {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
+/* Le lieu */
+
+.story #place {
+  position:relative;
+  overflow: hidden;
+  background-image: url("../images/Studio_Koukaki-image_place.png");
+}
+.story #place .blur {
+  filter:blur(15px);
+}
+.story #place .big-cloud {
+  position:absolute;
+  right:7em;
+  top:5em;
+  transform: translateX(0);
+  will-change: transform;
+}
+.story #place .little-cloud {
+  position:absolute;
+  right:39em;
+  top:20em;
+  transform: translateX(0);
+  will-change: transform;
+}
+
+#characters {
+  display:block !important;
+  width:100%;
+  h3 {
+    width:40%;
+  }
+}
+.story #characters div {
+  flex:none;
+}
+
 /* Swiper - Carrousel */
 /* Conteneur principal Swiper */
 .mySwiper {
-  width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
+.mySwiper figcaption {
+  font-size:1.5em;
+}
 /* Wrapper Swiper */
 .swiper-wrapper {
   display: flex;
@@ -161,10 +199,15 @@ header {
 
 /* Pagination visible */
 .swiper-pagination {
-  margin-top: 100px;
+  margin-top: 110px;
   text-align: center;
   position: relative !important;
   z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  height:14px !important;
+  width: 14px !important;
 }
 
 /* Animation menu */

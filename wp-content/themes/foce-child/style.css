@@ -9,30 +9,6 @@
  */
 
 
-/* Le lieu */
-
-.story #place {
-    position:relative;
-    overflow: hidden;
-    background-image: url("./images/Studio_Koukaki-image_place.png");
-}
-.story #place .blur {
-    filter:blur(15px);
-}
-.story #place .big-cloud {
-    position:absolute;
-    right:7em;
-    top:5em;
-    transform: translateX(0);
-    will-change: transform;
-}
-.story #place .little-cloud {
-    position:absolute;
-    right:39em;
-    top:20em;
-    transform: translateX(0);
-    will-change: transform;
-}
 
 
  

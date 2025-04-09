@@ -28,7 +28,6 @@ get_header();
             $characters_query = new WP_Query($args);
             ?>
             <article id="characters">
-                <div>
                     <h3>Les personnages</h3>
                     <!-- Slider main container -->
                     <div class="swiper mySwiper">
@@ -50,7 +49,6 @@ get_header();
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                </div>
             </article>
             <article id="place" class="parallax-container" data-0="position:relative;" data-end="position:relative;">
                 <div>
@@ -76,10 +74,6 @@ get_header();
         
         <?php get_template_part( 'template-parts/oscars' ); ?>
 
-
-
-
     </main><!-- #main -->
-
 <?php
 get_footer();
