@@ -37,19 +37,15 @@
                 <div class="submenu">
                     <ul>
                         <li><img src="<?php echo get_stylesheet_directory_uri() . '/images/logo-submenu.png'; ?>" alt="logo fleurs d'orangers & chats errants" ></li>
-                        <li><a href="#story">Histoire</a></li>
-                        <li><a href="#characters">Personnages</a></li>
-                        <li><a href="#place">Lieu</a></li>
-                        <li><a href="#studio">Studio Koukaki</a></li>
+                        <li class="submenu-histoire"><a href="#story">Histoire</a></li>
+                        <li class="submenu-personnages"><a href="#characters">Personnages</a></li>
+                        <li class="submenu-lieu"><a href="#place">Lieu</a></li>
+                        <li class="submenu-studio"><a href="#studio">Studio Koukaki</a></li>
                     </ul>
+                    <img class="logo-studio-koukaki" src="<?php echo get_stylesheet_directory_uri() . '/images/studio-koukaki.png'; ?>" alt="logo studio koukaki" >
                 </div>
             </ul>
             
         </nav>
-
-
-
-
-
 
 	</header><!-- #masthead -->
