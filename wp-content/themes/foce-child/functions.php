@@ -12,6 +12,23 @@ function theme_enqueue_styles() {
 }
 
 function theme_child_enqueue_scripts() {
+
+    wp_enqueue_script(
+        'gsap',
+        'https://unpkg.com/gsap@3/dist/gsap.min.js',
+        array(), // pas de dépendances
+        '',
+        true // charger dans le footer
+    );
+
+    wp_enqueue_script(
+        'scrolltrigger',
+        'https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js',
+        array(), // pas de dépendances
+        '',
+        true // charger dans le footer
+    );
+
     wp_enqueue_script(
         'app',
         get_stylesheet_directory_uri() . '/js/app.js',
@@ -26,15 +43,7 @@ function theme_child_enqueue_scripts() {
         '11.2.6',
         true // pour le charger dans le footer
     );
-    wp_enqueue_script(
-        'skrollr',
-        'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js',
-        array(), // pas de dépendances
-        '0.6.30',
-        true // charger dans le footer
-    );
-    // initialisation automatique
-    wp_add_inline_script('skrollr', 'skrollr.init();');
+
 }
 add_action('wp_enqueue_scripts', 'theme_child_enqueue_scripts');
 

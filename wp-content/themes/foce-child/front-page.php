@@ -50,15 +50,15 @@ get_header();
                         <div class="swiper-pagination"></div>
                     </div>
             </article>
-            <article id="place" class="parallax-container" data-0="position:relative;" data-end="position:relative;">
+            <article id="place" class="place-container">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
-                <div class="big-cloud blur" data-bottom-top="transform: translateX(300px);" data-top-bottom="transform: translateX(-300px);">
+                <div class="big-cloud blur">
                     <img src="<?php echo get_stylesheet_directory_uri() . '/images/big_cloud.png'; ?> " alt="gros nuage">
                 </div>
-                <div class="little-cloud blur" data-bottom-top="transform: translateX(-300px);" data-top-bottom="transform: translateX(300px);">
+                <div class="little-cloud blur">
                     <img src="<?php echo get_stylesheet_directory_uri() . '/images/little_cloud.png'; ?> " alt="petit nuage">
                 </div>
 

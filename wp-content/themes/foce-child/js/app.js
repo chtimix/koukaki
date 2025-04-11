@@ -66,3 +66,29 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 });
+
+// Animation nuage ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".big-cloud", {
+    x: -300, // déplacement vers la gauche
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".place-container",
+      start: "top bottom", // quand le haut du conteneur atteint le bas du viewport
+      end: "bottom top",   // jusqu'à ce que le bas du conteneur quitte le haut du viewport
+      scrub: true,         // lie le déplacement au scroll
+      markers: false       // passe à true pour voir les marqueurs de debug
+    }
+  });
+  gsap.to(".little-cloud", {
+    x: 300, // déplacement vers la droite
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".place-container",
+      start: "top bottom", // quand le haut du conteneur atteint le bas du viewport
+      end: "bottom top",   // jusqu'à ce que le bas du conteneur quitte le haut du viewport
+      scrub: true,         // lie le déplacement au scroll
+      markers: false       // passe à true pour voir les marqueurs de debug
+    }
+  });

@@ -144,18 +144,15 @@ h2.animate span:nth-child(2) {
   position: absolute;
   right: 7em;
   top: 5em;
-  transform: translateX(0);
-  will-change: transform;
 }
 
 .story #place .little-cloud {
   position: absolute;
   right: 39em;
   top: 20em;
-  transform: translateX(0);
-  will-change: transform;
 }
 
+/* Personnages */
 #characters {
   display: block !important;
   width: 100%;
