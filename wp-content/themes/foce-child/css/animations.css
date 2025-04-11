@@ -287,7 +287,7 @@ h2.animate span:nth-child(2) {
 }
 
 #menu-toggle-anim:checked ~ .submenu {
-  height: 806px;
+  height: calc(100vh - 80px);
   opacity: 1;
 }
 
@@ -302,7 +302,7 @@ h2.animate span:nth-child(2) {
 .submenu li {
   font-size: 3rem;
   display: block;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
   color: black;
 }
@@ -314,7 +314,7 @@ h2.animate span:nth-child(2) {
 
 .logo-studio-koukaki {
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   left: calc(50% - 80px);
 }
 
@@ -455,7 +455,6 @@ footer::before {
     right: 20px;
   }
   #menu-toggle-anim:checked ~ .submenu {
-    height: auto;
     padding-bottom: 80px;
   }
   .submenu ul {
