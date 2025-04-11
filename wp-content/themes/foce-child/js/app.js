@@ -17,7 +17,7 @@ document.querySelectorAll('.submenu a').forEach(link => {
 
 // Animation des titres de section 
 document.addEventListener('DOMContentLoaded', () => {
-    // ➤ 1. Injecter un span autour de chaque mot dans les h2
+    // Injecter un span autour de chaque mot dans les h2
     document.querySelectorAll('h2').forEach(h2 => {
       const words = h2.textContent.trim().split(/\s+/);
       h2.textContent = '';
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // ➤ 2. Créer l'observateur
+    // Créer l'observateur
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -41,28 +41,28 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.5
       });
   
-    // ➤ 3. Observer les h2
+    // Observer les h2
     document.querySelectorAll('h2').forEach(h2 => {
       observer.observe(h2);
     });
 
-    // Swiper
-    const swiper = new Swiper('.mySwiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-      },
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
-    });
+// Swiper
+const swiper = new Swiper('.mySwiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
-  });
+});

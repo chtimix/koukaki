@@ -4,6 +4,39 @@ header {
 
 /* Animation des sections*/
 
+@keyframes animTop {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes animLogo {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes animBottom {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
 .banner {
     animation : animTop 2s;
     position:relative;
@@ -33,48 +66,16 @@ header {
     animation-fill-mode: both;
 }
 
-
-@keyframes animTop {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes animLogo {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes animBottom {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* Video hero */
+
 .banner-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  height: 806px;
+  width:auto;
   z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -103,32 +104,36 @@ header {
   animation: rotationHoraire 30s linear infinite;
   transform-origin: center center;
 }
+.story h2.animate::after {
+  animation: rotationHoraire 30s linear infinite;
+  transform-origin: 75px 75px;
+}
 
 .site-footer ul::after {
   animation: rotationAntihoraire 60s linear infinite;
 }
 
-  /* Animation des titres de section (h2) avec IntersectionObserver 
-  Le sript est dans le dossier js du thème enfant */
+/* Animation des titres de section (h2) avec IntersectionObserver 
+Le sript est dans le dossier js du thème enfant */
 
-  h2 span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: transform .7s ease-out, opacity .7s ease-out;
-  }
+h2 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform .7s ease-out, opacity .7s ease-out;
+}
   
-  h2.animate span:nth-child(1) {
-    transition-delay: 0s;
-    opacity: 1;
-    transform: translateY(0);
-  }
+h2.animate span:nth-child(1) {
+  transition-delay: 0s;
+  opacity: 1;
+  transform: translateY(0);
+}
   
-  h2.animate span:nth-child(2) {
-    transition-delay: .7s;
-    opacity: 1;
-    transform: translateY(0);
-  }
+h2.animate span:nth-child(2) {
+  transition-delay: .7s;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Le lieu */
 
@@ -137,9 +142,11 @@ header {
   overflow: hidden;
   background-image: url("../images/Studio_Koukaki-image_place.png");
 }
+
 .story #place .blur {
   filter:blur(15px);
 }
+
 .story #place .big-cloud {
   position:absolute;
   right:7em;
@@ -147,6 +154,7 @@ header {
   transform: translateX(0);
   will-change: transform;
 }
+
 .story #place .little-cloud {
   position:absolute;
   right:39em;
@@ -162,11 +170,13 @@ header {
     width:40%;
   }
 }
+
 .story #characters div {
   flex:none;
 }
 
 /* Swiper - Carrousel */
+
 /* Conteneur principal Swiper */
 .mySwiper {
   padding-top: 50px;
@@ -213,15 +223,18 @@ header {
 }
 
 /* Animation menu */
+
 .main-navigation {
   position: relative;
 }
+
 #menu-toggle-anim {
   display: none;
 }
+
 .menu-icon {
   position: absolute;
-  right: 120px;
+  right: 100px;
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
@@ -229,6 +242,7 @@ header {
   cursor: pointer;
   z-index: 10;
 }
+
 .menu-icon span,
 .menu-icon::before,
 .menu-icon::after {
@@ -240,6 +254,7 @@ header {
     margin: 6px 0;
     transition: all 0.3s ease;
 }
+
 #menu-toggle-anim:checked + .menu-icon::before {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -269,7 +284,7 @@ header {
       position: absolute;
       right: -320px;
       bottom: -320px;
-      z-index: 1;
+      z-index: -1;
       animation: rotationAntihoraire 60s linear infinite;
     }
     &::before {
@@ -277,7 +292,7 @@ header {
       position: absolute;
       top: 60px;
       left: -60px;
-      z-index: 1;
+      z-index: -1;
       animation: rotationHoraire 60s linear infinite;
     }
 }
@@ -315,7 +330,7 @@ header {
   left:calc(50% - 80px);
 }
 
-/* Animation flottement */
+/* Animation flottement des personnages */
 .delay-1 { animation-delay: 0.3s; }
 .delay-2 { animation-delay: 0.8s; }
 
@@ -339,14 +354,14 @@ header {
     transform: translate(0px, 0px) rotate(0deg) scale(1);
   }
 }
-/* */
+
 .submenu-histoire {
   &::before {
     content: url('../images/kawenko.png');
     position: absolute;
     top: -20px;
     left: 20%;
-    z-index: 1;
+    z-index: -1;
     animation: flottement 6s infinite ease-in-out;
   }
   &::after {
@@ -354,7 +369,7 @@ header {
     position: absolute;
     top: -100px;
     right: 20%;
-    z-index: 1;
+    z-index: -1;
     animation: rotationHoraire 60s linear infinite;
   }
 }
@@ -364,7 +379,7 @@ header {
     position: absolute;
     top: 30px;
     right: -30px;
-    z-index: 1;
+    z-index: -1;
     animation: rotationHoraire 60s linear infinite;
   }
 }
@@ -375,15 +390,15 @@ header {
     position: absolute;
     top: -20px;
     left: 20%;
-    z-index: 1;
+    z-index: -1;
     animation: rotationHoraire 60s linear infinite;
   }
   &::after {
     content: url('../images/jaakuna.png');
     position: absolute;
-    top: -100px;
+    top: -75px;
     right: 20%;
-    z-index: 1;
+    z-index: -1;
     animation: flottement 6s infinite ease-in-out;
     animation-delay: 0.8s;
   }
@@ -395,17 +410,18 @@ header {
     position: absolute;
     bottom: -100px;
     left: 5%;
-    z-index: 1;
+    z-index: -1;
     animation: flottement 6s infinite ease-in-out;
     animation-delay: 0.5s;
   }
 }
 
-
 /* Oscars */
 
 #oscars {
   margin: 8rem 0 3rem 8rem;
+  display:flex;
+  flex-direction: row;
 }
 
 #oscars h3 {
@@ -425,13 +441,11 @@ header {
     z-index: -1;
     animation: rotationHoraire 30s linear infinite;
   }
-  &::after {
-    content: url('../images/logo-oscars.png');
-    position: absolute;
-    right: -5em;
-    top: 1.75em;
-    z-index: 1;
-  }
+}
+.logo-oscars {
+  margin-top:6em;
+  position:relative;
+  left:-50px;
 }
 
 /* Footer */
@@ -440,4 +454,98 @@ footer::before {
 }
 
 
+/* Media queries */ 
 
+@media screen and (max-width: 699px) {
+	.main-navigation {
+		height: 80px;
+	}
+  .main-navigation ul {
+    display:flex;
+      .site-title {
+        display:block;
+        text-align: left;
+        margin-right:20%;
+      }
+  }
+  .menu-icon {
+    right: 20px;
+  }
+  #menu-toggle-anim:checked ~ .submenu {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  .submenu ul {
+    display: block;
+  }
+
+  .submenu li {
+    font-size: 2rem;
+    display:block;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    
+  }
+
+  .submenu,
+  .submenu-histoire,
+  .submenu-personnages,
+  .submenu-lieu,
+  .submenu-studio,
+  .site-footer ul {
+    &::before {
+      content: '';
+    }
+    &::after {
+      content: '';
+    }
+  }
+  .banner-video {
+    display:none;
+  }
+  .banner {
+    min-height: 509px;
+  }
+  .banner-logo {
+    width:80%;
+  }
+  h2, h3 {
+    line-height: 1em;
+  }
+  #oscars h3 {
+    &::before {
+      content:'';
+    }
+  }
+  
+  .site-footer {
+    padding-top:4rem;
+  }
+}
+
+@media screen and (max-width: 1039px) {
+  .submenu-lieu {
+    &::after {
+      right: 7%;
+    }
+  }
+  #characters h3 {
+    width:100%;
+  }
+  #oscars {
+    flex-direction: column;
+    margin-left:2rem;
+  }
+  #oscars h3 {
+    width:100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .logo-oscars {
+    margin-top:0;
+    margin-left:5em;
+    left:0;
+    top: -30px;
+  }
+}
